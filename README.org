@@ -1,0 +1,13 @@
+* clojure-crypto
+
+  Cryptography experiments with Clojure.
+
+** Usage
+
+FIXME
+
+** License
+
+Copyright © 2020 Sébastien Le Callonnec
+
+This project is licensed under the GNU General Public License v3.0.
