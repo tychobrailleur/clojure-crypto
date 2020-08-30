@@ -8,6 +8,7 @@
   :dependencies [[org.clojure/clojure "1.10.0"]
                  [commons-codec/commons-codec "1.14"]
                  [it.unisa.dia.gas/jpbc-api "2.0.0"]
-                 [it.unisa.dia.gas/jpbc-plaf "2.0.0"]]
+                 [it.unisa.dia.gas/jpbc-plaf "2.0.0"]
+                 [it.unisa.dia.gas/jpbc-crypto "2.0.0"]]
   :main clojure-crypto.core
   :repl-options {:init-ns clojure-crypto.core})
