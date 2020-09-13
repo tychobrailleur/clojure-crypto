@@ -1,5 +1,5 @@
 (ns clojure-crypto.utils
-  (:import [java.security MessageDigest KeyFactory]
+  (:import [java.security MessageDigest KeyFactory SecureRandom]
            [org.apache.commons.codec.binary Hex]
            [java.util Base64]))
 
@@ -18,3 +18,11 @@
 
 (defn bytes->hex [bytes]
   (Hex/encodeHexString bytes))
+
+(defn random-bytes
+  "Create a byte array with `num` random bytes."
+  [num]
+  (let [rng (SecureRandom.)
+        buf (byte-array num)]
+    (.nextBytes rng buf)
+    buf))
