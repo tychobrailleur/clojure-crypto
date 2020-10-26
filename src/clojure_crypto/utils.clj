@@ -19,6 +19,9 @@
 (defn bytes->hex [bytes]
   (Hex/encodeHexString bytes))
 
+(defn hex->bytes [str]
+  (Hex/decodeHex str))
+
 (defn random-bytes
   "Create a byte array with `num` random bytes."
   [num]
@@ -26,3 +29,8 @@
         buf (byte-array num)]
     (.nextBytes rng buf)
     buf))
+
+(defn xor
+  "XOR two byte arrays, and returns the resulting byte array."
+  [first second]
+  (byte-array (map bit-xor first second)))

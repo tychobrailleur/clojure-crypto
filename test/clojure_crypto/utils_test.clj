@@ -19,3 +19,12 @@
   (testing "SHA-256 hashing"
     (is (= "2cf24dba5fb0a30e26e83b2ac5b9e29e1b161e5c1fa7425e73043362938b9824"
            (bytes->hex (sha256 (.getBytes "hello")))))))
+
+(deftest xor-test
+  (testing "XOR byte arrays"
+    (is (= (bytes->hex (xor (hex->bytes "e86d2de2")
+                            (hex->bytes "1792d21d")))
+           "ffffffff"))
+    (is (= (bytes->hex (xor (hex->bytes "e86d2de210")
+                            (hex->bytes "1792d21d")))
+           "ffffffff"))))
