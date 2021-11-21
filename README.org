@@ -2,12 +2,14 @@
 
   Cryptography experiments with Clojure.
 
+  See also [[https://docs.oracle.com/javase/7/docs/technotes/guides/security/crypto/CryptoSpec.html][JCA Reference Guide]].
+
 ** Usage
 
 FIXME
 
 ** License
 
-Copyright © 2020 Sébastien Le Callonnec
+Copyright © 2020–2021 Sébastien Le Callonnec
 
 This project is licensed under the GNU General Public License v3.0.
